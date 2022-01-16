@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Titanic Demographical Compositions</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-pie.min.js"></script>
+  </head> 
+
+    <body>
+
+    <section id="banner">
+      <div class="banner-text">
+        <h1>Titanic Demographical Compositions</h1>
+        <p>Passenger Information</p>
+        <div class="banner-btn">
+          <a href="#container_age"><span></span>Age</a>
+          <a href="#container_gender"><span></span>Gender</a>
+          <a href="#container_nationality"><span></span>Nationality</a>
+          <a href="#container_fatalities"><span></span>Fatalities</a>
+          <a href="#container_boarding-class"><span></span>Boarding Class</a>
+        </div>
+      </div>
+    </section>
+    <section>
+    <div id="sideNav">
+      <nav>
+          <ul>
+              <li><a href="#container_age">Age</a></li>
+              <li><a href="#container_gender">Gender</a></li>
+              <li><a href="#container_nationality">Nationality</a></li>
+              <li><a href="#container_fatalities">Fatalities</a></li>
+              <li><a href="#container_boarding-class">Boarding Class</a></li>
+          </ul>
+      </nav>
+    </div>
+    </section>
+
+    <div id="container_age" style="width: 100%; height: 100%"></div>
+    <div id="container_gender" style="width: 100%; height: 100%"></div>
+    <div id="container_nationality" style="width: 100%; height: 100%"></div>
+    <div id="container_fatalities" style="width: 100%; height: 100%"></div>
+    <div id="container_boarding-class" style="width: 100%; height: 100%"></div>
+
+    <script>
+        anychart.onDocumentReady(function () {
+
+            var age = [
+                { x: "0–4", value: 4 },
+                { x: "5–11", value: 4 },
+                { x: "12–15", value: 2 },
+                { x: "16–17", value: 3 },
+                { x: "18–20", value: 9 },
+                { x: "21–24", value: 16 },
+                { x: "25–34", value: 26 },
+                { x: "35–44", value: 21 },
+                { x: "45–54", value: 9 },
+                { x: "55–64", value: 5 },
+                { x: "65–74", value: 0.5 },
+                { x: "75+", value: 0 },
+                { x: "Age Unspecified", value: 0.5}
+            ];
+
+            var gender = [
+                { x: "Male", value: 67 },
+                { x: "Female", value: 33 }
+            ];
+
+            var nationality = [
+                { x: "American", value: 306 },
+                { x: "Australian", value: 6 },
+                { x: "Austrian", value: 46 },
+                { x: "Belgian", value: 26 },
+                { x: "British", value: 454 },
+                { x: "Bulgarian", value: 33 },
+                { x: "Canadian", value: 34 },
+                { x: "Croatian", value: 30 },
+                { x: "Danish", value: 10 },
+                { x: "Dutch", value: 1 },
+                { x: "Estonian", value: 13 },
+                { x: "Egyptian", value: 12 },
+                { x: "Finnish", value: 59 },
+                { x: "French", value: 31 },
+                { x: "German", value: 22 },
+                { x: "Hungarian", value: 3 },
+                { x: "Italian", value: 10 },
+                { x: "Japanese", value: 1 },
+                { x: "Mexican", value: 1 },
+                { x: "Norwegian", value: 26 },
+                { x: "Portuguese", value: 4 },
+                { x: "Russian", value: 27 },
+                { x: "Spanish", value: 13 },
+                { x: "Swedish", value: 113 },
+                { x: "Swiss", value: 82 },
+                { x: "Syrian", value: 11 },
+                { x: "Urugguayan", value: 3 },
+                { x: "Unspecified Nationality", value: 11 },
+            ];
+
+            var fatalities = [
+                { x: "Perished/Deceased (Passengers)", value: 634 },
+                { x: "Perished/Deceased (Crew)", value: 267 },
+                { x: "Survived (Passengers)", value: 683 },
+                { x: "Survived (Crew)", value: 623 }
+            ];
+
+            var boardingClass = [
+                { x: "First Class", value: 324 },
+                { x: "Second Class", value: 284 },
+                { x: "Third Class", value: 709 }
+            ];
+
+            var chartAge = anychart.pie();
+            var chartGender = anychart.pie();
+            var chartNationality = anychart.pie();
+            var chartFatalities = anychart.pie();
+            var chartClass = anychart.pie();
+
+            chartAge.title("This Graph Displays the Age of the Passengers");
+            chartGender.title("This Graph Displays the Gender of the Passengers");
+            chartNationality.title("This Graph Displays the Nationalities of the Passengers");
+            chartFatalities.title("This Graph Lists the Passengers Who either Surived or Perished");
+            chartClass.title("This Graph Lists the Number of Passengers by Class");
+
+            chartAge.data(age);
+            chartGender.data(gender);
+            chartNationality.data(nationality);
+            chartFatalities.data(fatalities);
+            chartClass.data(boardingClass);
+
+            chartAge.legend().position("right");
+            chartGender.legend().position("right");
+            chartNationality.legend().position("right");
+            chartFatalities.legend().position("right");
+            chartClass.legend().position("right");
+
+            chartAge.legend().itemsLayout("vertical");
+            chartGender.legend().itemsLayout("vertical");
+            chartNationality.legend().itemsLayout("vertical");
+            chartFatalities.legend().itemsLayout("vertical");
+            chartClass.legend().itemsLayout("vertical");
+
+            chartAge.sort("desc");
+            chartGender.sort("desc");
+            chartNationality.sort("desc");
+            chartFatalities.sort("desc");
+            chartClass.sort("desc");
+
+            chartAge.container('container_age');
+            chartGender.container('container_gender');
+            chartNationality.container('container_nationality');
+            chartFatalities.container('container_fatalities');
+            chartClass.container('container_boarding-class');
+
+            chartAge.draw();
+            chartGender.draw();
+            chartNationality.draw();
+            chartFatalities.draw();
+            chartClass.draw();
+
+            chartAge.background().fill("#F1E3B3");
+            chartGender.background().fill("#F1E3B3");
+            chartNationality.background().fill("#F1E3B3");
+            chartFatalities.background().fill("#F1E3B3");
+            chartClass.background().fill("#F1E3B3");
+
+                var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 1000,
+            speedAsDuration: true
+          });
+
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    </body>
+</html>
+

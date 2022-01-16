@@ -1,0 +1,310 @@
+#banner {
+    background: linear-gradient(rgba(231, 113, 66, 0.658), #581107), url(images/italian_food.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+}
+
+.logo {
+    width: 140px;
+    position: absolute;
+    top: 4%;
+    left: 10%;
+}
+
+.banner-text {
+    text-align: center;
+    color: rgb(209, 198, 39);
+    padding-top: 180px;
+}
+
+.banner-text h1 {
+    font-size: 50px;
+    font-family: 'Cochin', serif;
+}
+
+.banner-text p {
+    font-size: 25px;
+    font-family: 'Cochin', serif;
+}
+
+.banner-btn {
+    margin: 70px auto 0;
+}
+
+.banner-btn a {
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 20px;
+    padding: 10px 0;
+    color: rgb(209, 198, 39);
+    border: .5px solid rgb(209, 198, 39);
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+}
+
+.banner-btn a span {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(231, 210, 114);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.banner-btn a:hover span {
+    width: 100%;
+}
+
+.banner-btn a:hover {
+    color: rgba(46, 17, 5, 0.904);
+}
+
+#sideNav {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background: rgb(209, 198, 39);
+    z-index: 2;
+    transition: 0.5s;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 50px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(209, 198, 39);
+}
+
+body {
+    background-color: rgb(241, 227, 179);
+    background-size: cover;
+}
+
+#age {
+    width: 100%;
+    padding: 70px 0;
+}
+
+#age .title-text {
+    text-align: justify;
+    padding-bottom: 70px;
+}
+
+#age .title-text h2 {
+    margin: auto;
+    font-size: 20px;
+    font-family: 'Cochin', serif;
+    color: rgba(46, 17, 5, 0.904);
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#age .title-text h4 {
+    margin: auto;
+    font-size: 15px;
+    font-family: 'Cochin', serif;
+    color: rgba(46, 17, 5, 0.904);
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#gender {
+    width: 100%;
+    padding: 70px 0;
+}
+
+#gender .title-text {
+    text-align: justify;
+    padding-bottom: 70px;
+}
+
+#gender .title-text h2 {
+    margin: auto;
+    font-size: 20px;
+    font-family: 'Cochin', serif;
+    color: rgba(46, 17, 5, 0.904);
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#gender .title-text h4 {
+    margin: auto;
+    font-size: 15px;
+    font-family: 'Cochin', serif;
+    color: rgba(46, 17, 5, 0.904);
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#nationality {
+    width: 100%;
+    padding: 70px 0;
+}
+
+#nationality .title-text {
+    text-align: justify;
+    padding-bottom: 70px;
+}
+
+#nationality .title-text h2 {
+    margin: auto;
+    font-size: 20px;
+    font-family: 'Cochin', serif;
+    color: rgba(46, 17, 5, 0.904);
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#nationality .title-text h4 {
+    margin: auto;
+    font-size: 15px;
+    font-family: 'Cochin', serif;
+    color: rgba(46, 17, 5, 0.904);
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#fatalities {
+    width: 100%;
+    padding: 70px 0;
+}
+
+#fatalities .title-text {
+    text-align: justify;
+    padding-bottom: 70px;
+}
+
+#fatalities .title-text h2 {
+    margin: auto;
+    font-size: 20px;
+    font-family: 'Cochin', serif;
+    color: rgba(46, 17, 5, 0.904);
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#fatalities .title-text h4 {
+    margin: auto;
+    font-size: 15px;
+    font-family: 'Cochin', serif;
+    color: rgba(46, 17, 5, 0.904);
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#boarding-class {
+    width: 100%;
+    padding: 70px 0;
+}
+
+#boarding-class .title-text {
+    text-align: justify;
+    padding-bottom: 70px;
+}
+
+#boarding-class .title-text h2 {
+    margin: auto;
+    font-size: 20px;
+    font-family: 'Cochin', serif;
+    color: rgba(46, 17, 5, 0.904);
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#boarding-class .title-text h4 {
+    margin: auto;
+    font-size: 15px;
+    font-family: 'Cochin', serif;
+    color: rgba(46, 17, 5, 0.904);
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.information-box {
+    width: 80%;
+    font-size: 15px;
+    font-family: 'Cochin', serif;
+    margin: auto;
+    display: inline;
+    flex-wrap: wrap;
+    align-items: justify;
+    text-align: justify;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.information-text {
+    width: 80%;
+    font-size: 15px;
+    font-family: 'Cochin', serif;
+    margin: auto;
+    display: inline;
+    flex-wrap: wrap;
+    align-items: justify;
+    text-align: justify;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+html,
+body,
+#container_age,
+#container_gender,
+#container_nationality,
+#container_fatalities,
+#container_boarding-class {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
